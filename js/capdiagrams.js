@@ -102,7 +102,8 @@ function core(canvas, camZ, fov, opts) {
   if (opts.polar) { controls.minPolarAngle = opts.polar[0]; controls.maxPolarAngle = opts.polar[1]; }
   function resize() { const w = wrap.clientWidth, h = wrap.clientHeight; if (!w || !h) return; renderer.setSize(w, h, false); if (labelRenderer) labelRenderer.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix(); }
   resize(); new ResizeObserver(resize).observe(wrap);
-  return { canvas, wrap, scene, root, camera, renderer, labelRenderer, controls, resize };
+  const wide = (wrap.clientWidth || 999) >= 460;   // skip dense labels on narrow (mobile) panels
+  return { canvas, wrap, scene, root, camera, renderer, labelRenderer, controls, resize, wide };
 }
 
 function label(ctx, text, pos, px, op) {
@@ -372,16 +373,21 @@ function buildWorkflow(canvas) {
   const feedback = add([7, -6, 0], GREYS[2], 1.0);
   const bus = add([15, 0, 0], GREYS[2], 0.7);
   const clientsY = [12, 0, -12], clients = clientsY.map((y) => add([26, y, 0], GREYS[1], 1.1));
-  // headers + labels
-  label(ctx, "Data signal", [-31, 23.5, 0], 8.5, 0.5);
-  label(ctx, "Intelligence", [-9, 23.5, 0], 8.5, 0.5);
-  label(ctx, "Human in the loop", [7, 23.5, 0], 8.5, 0.5);
-  label(ctx, "Clients", [26, 23.5, 0], 8.5, 0.5);
-  label(ctx, "Always-on monitoring", [-15, 4.6, 0], 9, 0.82);
-  label(ctx, "Real-time insight", [-3, 3.6, 0], 8.5, 0.7);
-  label(ctx, "Approval", [7, 9, 0], 8.5, 0.7);
-  label(ctx, "Feedback", [7, -9.4, 0], 8.5, 0.7);
-  ["Client A", "Client B", "Client C"].forEach((nm, k) => label(ctx, nm, [26, clientsY[k] + (k === 2 ? -3 : 3), 0], 9, 0.72));
+  // headers + labels (full set on wide panels; on narrow/mobile keep only the two anchors so they don't overlap)
+  if (ctx.wide) {
+    label(ctx, "Data signal", [-31, 23.5, 0], 8.5, 0.5);
+    label(ctx, "Intelligence", [-9, 23.5, 0], 8.5, 0.5);
+    label(ctx, "Human in the loop", [7, 23.5, 0], 8.5, 0.5);
+    label(ctx, "Clients", [26, 23.5, 0], 8.5, 0.5);
+    label(ctx, "Always-on monitoring", [-15, 4.6, 0], 9, 0.82);
+    label(ctx, "Real-time insight", [-3, 3.6, 0], 8.5, 0.7);
+    label(ctx, "Approval", [7, 9, 0], 8.5, 0.7);
+    label(ctx, "Feedback", [7, -9.4, 0], 8.5, 0.7);
+    ["Client A", "Client B", "Client C"].forEach((nm, k) => label(ctx, nm, [26, clientsY[k] + (k === 2 ? -3 : 3), 0], 9, 0.72));
+  } else {
+    label(ctx, "Always-on monitoring", [-15, 5.4, 0], 8.5, 0.82);
+    label(ctx, "Clients", [26, 16, 0], 8.5, 0.7);
+  }
   const pairs = [];
   inputs.forEach((i) => pairs.push([i, coreN]));
   pairs.push([coreN, insight], [insight, approval], [insight, feedback], [approval, bus], [feedback, bus]);
