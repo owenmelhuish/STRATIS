@@ -1,5 +1,5 @@
 /* =========================================================================
-   STRATIS — molecular system (3D)
+   STRATIS - molecular system (3D)
    Vanilla-three.js port of the product's molecular-scene.tsx, greyscale,
    on a light theme: concentric wireframe ring-guide spheres + translucent
    atoms (outer sphere + bright core), gentle drift, auto-rotate, drag.
@@ -16,7 +16,7 @@ const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const RING_RADII = [0, 8, 14, 20, 27, 34];
 const RING_NODE  = [2.0, 1.3, 1.0, 0.9, 0.7, 0.6];
 const RING_COUNT = [1, 10, 8, 10, 23, 18];
-// greyscale (dark → light) — reads on the light card
+// greyscale (dark → light) - reads on the light card
 const RING_GREY  = ["#1A1D21", "#3A4047", "#545B63", "#6C737B", "#868D95", "#9AA1A9"];
 const LABEL_OP   = [1, 0.78, 0.78, 0.55, 0.4, 0.46];
 const LABEL_PX   = [16, 11, 11, 9, 8, 8.5];
@@ -77,7 +77,7 @@ function init(canvas) {
   // ----- scene / camera / renderers -----
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 300);
-  camera.position.set(0, 5, 86);   // zoomed out — full sphere in frame
+  camera.position.set(0, 5, 86);   // zoomed out - full sphere in frame
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
@@ -141,7 +141,7 @@ function init(canvas) {
   const EDGE_DUR = 0.42, D_MAX = 6, MAX_NODES = 24, HOLD = 1.7, FADE = 1.5;
   const GROW = D_MAX * EDGE_DUR, CYCLE = GROW + HOLD + FADE;
   const STARTS = [];
-  nodes.forEach((n, i) => { if (n.ring <= 2) STARTS.push(i); });   // start inner — room to branch out
+  nodes.forEach((n, i) => { if (n.ring <= 2) STARTS.push(i); });   // start inner - room to branch out
 
   function seg() { const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.BufferAttribute(new Float32Array(6), 3)); return g; }
   const lines = [];

@@ -1,10 +1,10 @@
 /* =========================================================================
-   STRATIS — data flywheel (3D growing reasoning mass)
+   STRATIS - data flywheel (3D growing reasoning mass)
    Same visual language as js/molecule.js: greyscale node spheres (translucent
    outer + bright core), faint plexus wireframe, a turquoise signal, CSS2D
    labels, OrbitControls, IntersectionObserver pause, reduced-motion fallback.
 
-   An organic 3D node cloud — evenly spread, denser toward the middle, tapering
+   An organic 3D node cloud - evenly spread, denser toward the middle, tapering
    at the ends. The full structure is present from the start; over time it keeps
    growing as glowing nodes stream IN from a data stream above and a user-input
    stream below. A turquoise reasoning signal flows as a clear comet, node by
@@ -59,7 +59,7 @@ function init(canvas) {
   const outputNode = nodes.length; nodes.push({ target: [SX + 6, 0, 0], grey: GREYS[2], rad: 1.8, central: false, cluster: false, terminal: true, x: SX + 6 });
 
   nodes.forEach((nd) => { if (!nd.central) { nd.origin = nd.target; nd.settleStart = rnd() * (nd.cluster ? 1.2 : 0.8); nd.travel = nd.cluster ? 0.7 : 0.6; } });
-  growIdx.forEach((gi) => { nodes[gi].origin = nodes[gi].target; nodes[gi].settleStart = rnd() * 2.5; nodes[gi].travel = 0.9; });  // central mass — present from the start (the model)
+  growIdx.forEach((gi) => { nodes[gi].origin = nodes[gi].target; nodes[gi].settleStart = rnd() * 2.5; nodes[gi].travel = 0.9; });  // central mass - present from the start (the model)
 
   // ----- edges: k-nearest + guaranteed left→right links -----
   const edges = [], seen = new Set(), adj = new Map(), edgeIndex = new Map();
@@ -78,7 +78,7 @@ function init(canvas) {
     for (let j = 0; j < nodes.length; j++) { if (isStruct(j) && nodes[j].x > nodes[i].x + 1.5) { const d = dist2(nodes[i].target, nodes[j].target); if (d < bd) { bd = d; best = j; } } }
     if (best != null && bd < 24 * 24) addEdge(i, best);
   }
-  // loose intra-cluster mesh — clusters are NOT wired to the structure (they feed it only via travelling nodes)
+  // loose intra-cluster mesh - clusters are NOT wired to the structure (they feed it only via travelling nodes)
   [topCluster, botCluster].forEach((cl) => cl.forEach((ci) => {
     const di = cl.filter((j) => j !== ci).map((j) => ({ j, d: dist2(nodes[ci].target, nodes[j].target) })).sort((a, b) => a.d - b.d);
     for (let m = 0; m < 2 && di[m]; m++) addEdge(ci, di[m].j);
@@ -98,7 +98,7 @@ function init(canvas) {
     }
     return path;
   }
-  // anchor the Input to the structure node PHYSICALLY NEAREST it (a far-left node), so the flow starts at the edge — never jumps to the middle
+  // anchor the Input to the structure node PHYSICALLY NEAREST it (a far-left node), so the flow starts at the edge - never jumps to the middle
   const baseArr = [...baseSet];
   const nearestBase = (px) => baseArr.reduce((b, j) => (dist2(nodes[j].target, px) < dist2(nodes[b].target, px) ? j : b), baseArr[0]);
   const spines = [];
@@ -231,7 +231,7 @@ function init(canvas) {
       sp.head.material.opacity = clamp01(Math.min(sp.u, len - 1 - sp.u) * 5);
     }
 
-    // flywheel particles — only the active ones (released by emitBurst): Output → input cluster → into the structure
+    // flywheel particles - only the active ones (released by emitBurst): Output → input cluster → into the structure
     for (const f of flow) {
       if (!f.active) { f.m.visible = false; continue; }
       f.p += dt / f.dur; if (f.p >= 1) { f.active = false; f.m.visible = false; continue; }
@@ -242,12 +242,12 @@ function init(canvas) {
         const t = p / 0.3, mt = 1 - t, cx = SX * 0.6, cy = (f.toData ? 1 : -1) * CLY * 1.5;
         f.m.position.set(mt * mt * outPos[0] + 2 * mt * t * cx + t * t * c[0], mt * mt * outPos[1] + 2 * mt * t * cy + t * t * c[1], t * t * c[2]);
         op = clamp01(t * 4) * 0.95;
-      } else if (p < 0.42) {                           // arrived — populates the cluster
+      } else if (p < 0.42) {                           // arrived - populates the cluster
         f.m.position.set(c[0], c[1], c[2]); nodeLit[f.cl] = Math.max(nodeLit[f.cl], 1);
       } else if (p < 0.86) {                           // cluster → structure (feeds the model)
         const t = easeIO((p - 0.42) / 0.44);
         f.m.position.set(c[0] + (en[0] - c[0]) * t, c[1] + (en[1] - c[1]) * t, c[2] + (en[2] - c[2]) * t);
-      } else {                                         // fed in — flash the node it joined, fade out
+      } else {                                         // fed in - flash the node it joined, fade out
         f.m.position.set(en[0], en[1], en[2]); op = (1 - (p - 0.86) / 0.14) * 0.95; nodeLit[f.entry] = Math.max(nodeLit[f.entry], 1);
       }
       f.m.material.opacity = op; f.m.scale.setScalar(0.55 + 0.55 * clamp01(op / 0.95));

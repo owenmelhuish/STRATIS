@@ -1,13 +1,13 @@
 /* =========================================================================
-   STRATIS — generative visual layer
+   STRATIS - generative visual layer
    Enterprise-grade instrument diagrams (SVG). Each diagram is built to
-   *explain* its concept, not just decorate. Abstract, non-literal — no
+   *explain* its concept, not just decorate. Abstract, non-literal - no
    product UI, no fabricated proof.
-     ribbon   — signature flowing hero atmosphere
-     signal   — signal weighting (Block A: sees across everything)
-     converge — reasoning flow into one decision (Block B: reasoned as one)
-     compound — compounding-understanding chart (Block C: compounds over time)
-     core     — the intelligence core ingesting every dimension
+     ribbon   - signature flowing hero atmosphere
+     signal   - signal weighting (Block A: sees across everything)
+     converge - reasoning flow into one decision (Block B: reasoned as one)
+     compound - compounding-understanding chart (Block C: compounds over time)
+     core     - the intelligence core ingesting every dimension
    ========================================================================= */
 (function () {
   "use strict";
@@ -94,7 +94,7 @@
   }
 
   /* ----------------------------------------------------------------- */
-  /*  Block A — SIGNAL WEIGHTING                                       */
+  /*  Block A - SIGNAL WEIGHTING                                       */
   /*  named inputs scored through "your context" → amplified / set aside */
   /* ----------------------------------------------------------------- */
   function renderSignal(host) {
@@ -139,7 +139,7 @@
   }
 
   /* ----------------------------------------------------------------- */
-  /*  Block B — REASONING FLOW                                         */
+  /*  Block B - REASONING FLOW                                         */
   /*  every dimension → reasoning core → one decision (+ rationale)    */
   /* ----------------------------------------------------------------- */
   function renderConverge(host) {
@@ -197,7 +197,7 @@
   }
 
   /* ----------------------------------------------------------------- */
-  /*  Block C — COMPOUNDING CHART                                      */
+  /*  Block C - COMPOUNDING CHART                                      */
   /*  understanding curve vs a flat "resets each question" baseline    */
   /* ----------------------------------------------------------------- */
   function renderCompound(host) {
@@ -241,7 +241,7 @@
   }
 
   /* ----------------------------------------------------------------- */
-  /*  Intelligence core — every dimension ingested into one layer      */
+  /*  Intelligence core - every dimension ingested into one layer      */
   /* ----------------------------------------------------------------- */
   function renderCore(host) {
     const s = slice("0 0 900 600");

@@ -1,5 +1,5 @@
 /* =========================================================================
-   STRATIS — landing page TEST (video/dashboard concept)
+   STRATIS - landing page TEST (video/dashboard concept)
    Adapted from the RIVR DeFi spec to STRATIS copy + brand fonts.
    Self-contained (not linked to the main styles.css).
    ========================================================================= */
@@ -74,7 +74,7 @@ ul { list-style: none; }
 }
 @keyframes navIn { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: none; } }
 .navpill--logo { animation-delay: 0.05s; font-family: var(--display); font-weight: 600; font-size: 1.12rem; letter-spacing: 0.18em; color: var(--ink-strong); }
-/* Official STRATIS wordmark — masked so it inherits `color` */
+/* Official STRATIS wordmark - masked so it inherits `color` */
 .logo { display: inline-block; height: 15px; aspect-ratio: 553.72 / 75.39; flex: none; background: currentColor; -webkit-mask: url(/assets/stratis-logo.svg) center / contain no-repeat; mask: url(/assets/stratis-logo.svg) center / contain no-repeat; }
 .foot__logo .logo { height: 21px; }
 .navpill--menu { animation-delay: 0.13s; padding: 0 7px; gap: 2px; }
@@ -90,7 +90,7 @@ ul { list-style: none; }
 .chev { width: 7px; height: 7px; margin-left: 1px; border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor; transform: rotate(45deg) translate(-1px,-2px); opacity: 0.5; transition: transform 0.4s var(--ease); }
 .navitem.is-open > .navlink .chev { transform: rotate(-135deg) translate(-1px,0); opacity: 0.9; }
 
-/* CTA pill — glass, matching the rest of the nav */
+/* CTA pill - glass, matching the rest of the nav */
 .navpill--cta { color: var(--ink-strong); gap: 0.7em; padding: 0 0.5em 0 1.2em; cursor: pointer; }
 .navpill--cta:hover { background: rgba(255,255,255,0.82); transform: translateY(-1px); }
 .navpill--cta .pill { width: 30px; height: 30px; border-radius: 50%; background: rgba(30,50,90,0.1); display: grid; place-items: center; transition: transform 0.4s var(--ease); }
@@ -195,12 +195,12 @@ body.menu-open .mobile-menu { transform: none; visibility: visible; }
 @media (max-width: 640px) { .corner-br { display: none; } }
 
 /* ----------------------------------------------------------------------- */
-/*  INTELLIGENCE LAYER (3D molecular system — shared molecule.js)          */
+/*  INTELLIGENCE LAYER (3D molecular system - shared molecule.js)          */
 /* ----------------------------------------------------------------------- */
 .intel { width: 100%; max-width: 1536px; margin-inline: auto; padding: 24px 12px; }
 @media (min-width: 768px) { .intel { padding: 48px 20px; } }
 .intel__head { max-width: 720px; margin: 0 auto clamp(30px, 4vw, 52px); text-align: center; }
-.intel__eyebrow { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--signal); font-weight: 600; }
+.intel__eyebrow { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-strong); font-weight: 600; }
 .intel__title { font-family: var(--display); font-weight: 500; font-size: clamp(1.8rem, 3.6vw, 3rem); letter-spacing: -0.025em; color: var(--ink-strong); line-height: 1.06; margin: 1rem 0 0.9rem; text-wrap: balance; }
 .intel__sub { font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.5; color: var(--ink); max-width: 56ch; margin-inline: auto; }
 .intel__panel {
@@ -267,7 +267,7 @@ body.menu-open .mobile-menu { transform: none; visibility: visible; }
 @media (min-width: 768px) { .card { border-radius: 2rem; } }
 .card--1 { min-height: 28rem; }
 @media (min-width: 768px) { .card--1 { grid-row: span 2; } .card--2 { grid-column: span 2; } }
-.card__eyebrow { font-family: var(--body); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--signal); font-weight: 600; margin-bottom: 1rem; }
+.card__eyebrow { font-family: var(--body); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-strong); font-weight: 600; margin-bottom: 1rem; }
 .card__title { font-family: var(--display); font-weight: 500; font-size: clamp(1.35rem, 2vw, 1.95rem); letter-spacing: -0.02em; color: var(--ink-strong); line-height: 1.1; max-width: 18ch; }
 .card__desc { font-size: 0.98rem; color: var(--ink); line-height: 1.5; margin-top: auto; padding-top: 1.5rem; max-width: 40ch; }
 .card__spacer { flex: 1; }
@@ -286,7 +286,7 @@ body.menu-open .mobile-menu { transform: none; visibility: visible; }
 .card--4:hover .card__circle { transform: scale(1.12); background: #e2e6ea; }
 
 /* ----------------------------------------------------------------------- */
-/*  TESTIMONIALS — scrolling carousel (Cleo-style, test-skinned)           */
+/*  TESTIMONIALS - scrolling carousel (Cleo-style, test-skinned)           */
 /* ----------------------------------------------------------------------- */
 .testi { width: 100%; padding: clamp(60px, 8vw, 116px) 0; overflow: hidden; background: radial-gradient(120% 80% at 50% 58%, rgba(87,255,235,0.05), transparent 72%); }
 .testi__head { text-align: center; padding: 0 20px; max-width: 1536px; margin-inline: auto; }
@@ -314,7 +314,7 @@ body.menu-open .mobile-menu { transform: none; visibility: visible; }
 @media (max-width: 680px) { .testi-card { width: 80vw; grid-template-columns: 1fr; } .testi-card__tile { min-height: 170px; } .testi-card__tile::before { font-size: 6rem; } }
 
 /* ----------------------------------------------------------------------- */
-/*  SOLUTIONS — agency / enterprise blocks (test-page styling)             */
+/*  SOLUTIONS - agency / enterprise blocks (test-page styling)             */
 /* ----------------------------------------------------------------------- */
 .solutions { width: 100%; max-width: 1536px; margin-inline: auto; padding: 24px 12px; }
 @media (min-width: 768px) { .solutions { padding: 24px 20px 48px; } }
@@ -337,7 +337,7 @@ body.menu-open .mobile-menu { transform: none; visibility: visible; }
 .sol-card__wm { position: absolute; right: -2rem; bottom: -2.5rem; width: 16rem; z-index: 0; color: #1e325a; opacity: 0.03; transition: transform 0.7s var(--ease); pointer-events: none; }
 .sol-card:hover .sol-card__wm { transform: scale(1.1); }
 .sol-card__body { position: relative; z-index: 2; }
-.sol-card__label { display: inline-flex; align-items: center; gap: 0.5em; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--signal); font-weight: 600; margin-bottom: 1.1rem; }
+.sol-card__label { display: inline-flex; align-items: center; gap: 0.5em; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-strong); font-weight: 600; margin-bottom: 1.1rem; }
 .sol-card__label::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--signal); }
 .sol-card__title { font-family: var(--display); font-weight: 500; font-size: clamp(1.5rem, 2.4vw, 2.3rem); letter-spacing: -0.02em; color: var(--ink-strong); line-height: 1.08; max-width: 18ch; margin-bottom: 0.85rem; }
 .sol-card__desc { font-size: 1rem; color: var(--ink); line-height: 1.5; max-width: 34ch; margin-bottom: 1.5rem; }

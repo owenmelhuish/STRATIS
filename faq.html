@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>STRATIS FAQ: the questions buyers ask first</title>
+<meta name="description" content="Answers to common questions about STRATIS, the Live Marketing Terminal: how it works, how it's different, your data, trust, and getting started." />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/home.css" />
+<link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+<!-- ============ NAV (three floating glass pills) ============ -->
+<header class="nav" id="nav">
+  <div class="nav__row">
+    <a href="index.html" class="navpill navpill--logo" aria-label="STRATIS home"><span class="logo"></span></a>
+    <nav class="navpill navpill--menu" aria-label="Primary" id="navMenu">
+      <div class="navitem"><button class="navlink" data-menu="platform" aria-expanded="false">Platform <span class="chev"></span></button></div>
+      <div class="navitem"><button class="navlink" data-menu="solutions" aria-expanded="false">Solutions <span class="chev"></span></button></div>
+      <div class="navitem"><button class="navlink" data-menu="resources" aria-expanded="false">Resources <span class="chev"></span></button></div>
+    </nav>
+    <a href="mailto:hello@stratis.technology?subject=Book%20a%20demo" class="navpill navpill--cta">Book a demo
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span>
+    </a>
+    <button class="nav__toggle navpill" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <div class="megawrap" id="megawrap">
+      <div class="mega" data-panel="platform">
+        <div class="mega__inner mega__inner--feature">
+          <a class="mega__feature" href="index.html#what">
+            <span class="mega__feature-label">The Live Marketing Terminal</span>
+            <span class="mega__feature-title">See the whole picture, reasoned as one →</span>
+          </a>
+          <div class="mega__links">
+            <span class="mega__heading">Explore the platform</span>
+            <div class="mega__grid">
+              <a href="index.html#what"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>What it does<span class="ar">→</span></a>
+              <a href="capabilities.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="9" r="2"/><circle cx="11" cy="17" r="2"/><path d="M9 8l6 1M9 9l3 6"/></svg>Capabilities<span class="ar">→</span></a>
+              <a href="index.html#flywheel"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 21l-5-2.8 1-5.5-4-3.9 5.5-.8z"/></svg>Why it's different<span class="ar">→</span></a>
+              <a href="index.html#flywheel"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/><path d="M8 12h2M14 12h2"/></svg>How it works<span class="ar">→</span></a>
+              <a href="capabilities.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Trust &amp; governance<span class="ar">→</span></a>
+              <a href="faq.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3 2.4V14"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></svg>FAQ<span class="ar">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mega" data-panel="solutions">
+        <div class="mega__inner mega__inner--cards">
+          <span class="mega__heading">Solutions</span>
+          <div class="mega__cards">
+            <a class="mega__card" href="agencies.html">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="11" r="2.4"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M14 20c0-2 1.4-3.6 3-3.6s3 1.6 3 3.6"/></svg>
+              <span class="mega__card-title">For agencies</span>
+              <span class="mega__card-desc">Senior-grade reasoning on every account, without scaling headcount.</span>
+            </a>
+            <a class="mega__card" href="enterprise.html">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+              <span class="mega__card-title">For enterprise</span>
+              <span class="mega__card-desc">Decision quality and defensibility at the scale of a major brand.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mega" data-panel="resources">
+        <div class="mega__inner mega__inner--feature">
+          <a class="mega__feature" href="faq.html">
+            <span class="mega__feature-label">Resources</span>
+            <span class="mega__feature-title">Common questions, answered →</span>
+          </a>
+          <div class="mega__links">
+            <span class="mega__heading">Explore</span>
+            <div class="mega__grid">
+              <a href="faq.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3 2.4V14"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></svg>FAQ<span class="ar">→</span></a>
+              <a href="capabilities.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Security &amp; trust<span class="ar">→</span></a>
+              <a href="mailto:hello@stratis.technology"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg>Contact<span class="ar">→</span></a>
+              <a href="index.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>About<span class="ar">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="nav-scrim" id="navScrim" aria-hidden="true"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#what">Platform</a>
+  <a href="capabilities.html">Capabilities</a>
+  <a href="agencies.html">For agencies</a>
+  <a href="enterprise.html">For enterprise</a>
+  <a href="faq.html">FAQ</a>
+  <a href="mailto:hello@stratis.technology?subject=Book%20a%20demo">Book a demo</a>
+</div>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <div class="hero-wrap">
+    <section class="hero">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" src="/videos/hero.mp4"></video>
+      <div class="hero__tint"></div>
+      <div class="hero__content">
+        <span class="badge r in"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l1.6 5.2L19 10l-5.4 1.8L12 17l-1.6-5.2L5 10l5.4-1.8z"/></svg>Resources · FAQ</span>
+        <h1 class="hero__title r in" data-d="1">The questions buyers ask first.</h1>
+        <p class="hero__sub r in" data-d="2">What STRATIS is, how it's different, what happens to your data, and how quickly you're up and running. The answers, in plain language.</p>
+      </div>
+      <div class="card-bl">
+        <span class="card-bl__dots"><span></span><span></span><span></span></span>
+        <span class="card-bl__txt">Still have a question?<small>talk to the team directly</small></span>
+        <a href="mailto:hello@stratis.technology?subject=Question%20about%20STRATIS" class="card-bl__btn">Ask us</a>
+      </div>
+      <a href="capabilities.html" class="corner-br">
+        <svg class="corner-cut corner-cut--top" viewBox="0 0 56 56"><path d="M56 56V0C56 30.9279 30.9279 56 0 56H56Z" fill="#f0f0f0"/></svg>
+        <svg class="corner-cut corner-cut--left" viewBox="0 0 56 56"><path d="M56 56V0C56 30.9279 30.9279 56 0 56H56Z" fill="#f0f0f0"/></svg>
+        <span class="corner-br__circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span>
+        <span class="corner-br__txt">Capabilities<small>The platform, end to end</small></span>
+      </a>
+    </section>
+  </div>
+
+  <!-- ============ FAQ (horizontal carousel) ============ -->
+  <section class="faqsec" id="faq">
+    <div class="faqhead">
+      <h2 class="faqhead__title">Frequently<br/>Asked <em>Questions</em></h2>
+      <div class="faqhead__aside">
+        <p class="faqhead__intro">Find answers to common questions about the platform, how it reasons, how it's governed, and how it works inside your operation.</p>
+        <div class="faqnav">
+          <button class="faqnav__btn faqnav__btn--prev" id="faqPrev" aria-label="Previous question"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <button class="faqnav__btn faqnav__btn--next" id="faqNext" aria-label="Next question"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="faqtrack" id="faqTrack">
+      <article class="faqcard faqcard--open">
+        <h3 class="faqcard__q">What is STRATIS, in one sentence?</h3>
+        <p class="faqcard__a">A marketing intelligence platform that reasons across your entire media operation and produces the recommendations a senior strategist would, at the speed and scale your team needs to act on. Not a dashboard, not a reporting tool, and not a chatbot wrapped around your data: a decision layer that sits above your existing stack and surfaces what to do next, with the reasoning to back it up.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">What does STRATIS do for me on a Tuesday morning?</h3>
+        <p class="faqcard__a">When your team signs in, the platform has already done its overnight reasoning across every channel you run. The home surface shows what changed, what matters, and what to do: live dashboards with pacing and risk flags, structured insight cards, specific recommendations with projected impact, and an approval queue. Your operators approve, modify, or reject, and the platform learns from every decision.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">Is this just ChatGPT with my marketing data plugged in?</h3>
+        <p class="faqcard__a">No. A general model with your data plugged in produces text that sounds like marketing analysis. STRATIS produces marketing analysis. It is trained on the reasoning of senior operators rather than web text, configured against your specific brand context, reconciled against live external signal, and it learns from what actually happens when its recommendations are acted on. A general tool has the substrate; STRATIS is everything built above it.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">Who does STRATIS replace inside my organization?</h3>
+        <p class="faqcard__a">It does not replace your team; it redirects what they spend time on. A large share of analyst capacity goes to recurring reporting: pacing decks, performance reviews, executive pulls, agency reconciliation. STRATIS automates that layer and surfaces the insight underneath, so those hours move to strategy, creative briefing, and the work that compounds. Same headcount, materially more strategic output.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">Does STRATIS take actions on its own?</h3>
+        <p class="faqcard__a">No. Every recommendation requires explicit human approval before execution. The default posture is human-in-the-loop: the platform produces the recommendation with reasoning and projected impact, and waits. Brands can choose to make specific lower-risk classes more autonomous over time, under their own governance, but the default for new deployments is approval on everything.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">How does STRATIS get smarter over time?</h3>
+        <p class="faqcard__a">Through a feedback loop we call the data flywheel: operator feedback, simulated operators, in-model testing, real-world outcomes, causal impact measurement, and long-horizon pattern learning. Each source sharpens a different dimension of the system. The compound effect is that the model producing your recommendations in year three is meaningfully better than the one in year one, even though the interface is the same.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">Will our data be used to train your AI models?</h3>
+        <p class="faqcard__a">Your operating data stays inside your tenant and is used to configure and improve the system for your brand specifically. It is never used to improve another brand's experience. Platform-level improvements are built by STRATIS from internal and synthetic data, not by borrowing from one tenant to benefit another. In one line: your data improves your instance, not anyone else's.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">Can we audit what STRATIS did, and why?</h3>
+        <p class="faqcard__a">Yes. Audit is an architectural primitive, not a feature. Every recommendation is preserved with its full reasoning chain, the evidence retrieved, the brand context and external signal at the time, and the operator action taken. Every approval, modification, and rejection is logged with identity and timestamp in an append-only log, so any decision can be reconstructed and traced to the human who approved it.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">Does STRATIS hallucinate?</h3>
+        <p class="faqcard__a">It is built specifically to prevent the failure mode general AI is known for: confident text that is not grounded in evidence. Every recommendation cites the evidence behind each step, the platform verifies those citations actually support the claim before surfacing anything, and it abstains rather than fabricate when confidence is too low. Recommendations that fail verification are sent back for re-reasoning rather than shown.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">Does my team need to be technical to use STRATIS?</h3>
+        <p class="faqcard__a">No. The platform is built for marketing operators, not data scientists. It handles the data, the analysis, and the reasoning chain; your team brings marketing judgment, reviewing recommendations and providing reasoning when they override. The reasoning is shown in marketing language, and that judgment is the high-value signal that closes the loop.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">What does a pilot look like?</h3>
+        <p class="faqcard__a">Three gated phases, each earning the next. Phase 01 is a historical proof on a static subset of your own data, with no live integration. Phase 02 goes live on a single channel with operators in the platform. Phase 03 widens to multiple channels on one campaign. Each gate is a real decision, the infrastructure carries forward, and by the final gate the full engagement decision is made entirely on proof from your own operation.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">What kind of results should I expect?</h3>
+        <p class="faqcard__a">Results show up on three timelines. Operational, within weeks: reporting time collapsed and the cycle from insight to executed decision compressed from weeks to hours. Performance, across quarters: improvement on the metrics you are measured against, attributable through the impact framework. Strategic, across years: a marketing function at higher leverage, with an accumulated brand context no individual could hold in their head.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">What's the honest downside?</h3>
+        <p class="faqcard__a">Three, worth surfacing. The first three months are the hardest, because the brand context layer is shallow at the start and sharpens with use. The platform requires habit change: operators write down reasoning when they override. And not every recommendation will be right; it is an AI system working on incomplete data, which is exactly why the human-in-the-loop and the gated pilot exist.</p>
+      </article>
+      <article class="faqcard">
+        <h3 class="faqcard__q">Why should I move on this now rather than wait?</h3>
+        <p class="faqcard__a">Because the platform's value compounds with time on the system, and the compounding cannot be backfilled later. The brand context deepens with every interaction, the reasoning tunes to your operation, and the flywheel produces more signal. A competitor who started six months ago has a head start that gets harder to close. The cost of waiting is the compounding you are not capturing.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CTA (video) ============ -->
+  <div class="cta-wrap" id="demo">
+    <section class="cta">
+      <video class="cta__video" autoplay muted loop playsinline preload="auto" src="/videos/cta.mp4"></video>
+      <div class="cta__tint"></div>
+      <div class="cta__content">
+        <h2 class="cta__title r">Still have a question? Let's talk.</h2>
+        <div class="cta__btns r" data-d="1">
+          <a href="mailto:hello@stratis.technology?subject=Book%20a%20demo" class="btn-white">Book a demo
+            <span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span></a>
+          <a href="capabilities.html" class="btn-glass">See the capabilities</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="foot__inner">
+      <div>
+        <div class="foot__logo" aria-label="STRATIS"><span class="logo"></span></div>
+        <p class="foot__desc">The Live Marketing Terminal: where decisions get made.</p>
+      </div>
+      <div class="foot__col">
+        <h4>Product</h4>
+        <a href="index.html">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="agencies.html">For agencies</a>
+        <a href="enterprise.html">For enterprise</a>
+        <a href="mailto:hello@stratis.technology">Book a demo</a>
+      </div>
+      <div class="foot__col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="mailto:hello@stratis.technology">Contact</a>
+      </div>
+      <div class="foot__col">
+        <h4>Resources</h4>
+        <a href="faq.html">FAQ</a>
+        <a href="#">Privacy</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+    <div class="foot__base">© 2026 STRATIS Technology. All rights reserved.</div>
+  </footer>
+</main>
+
+<script>
+  // scroll reveals
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
+  document.querySelectorAll(".r:not(.in)").forEach(function (el) { io.observe(el); });
+  document.querySelectorAll("video").forEach(function (v) { v.play && v.play().catch(function(){}); });
+
+  // ---- FAQ carousel ----
+  var faqTrack = document.getElementById("faqTrack");
+  if (faqTrack) {
+    var cards = Array.prototype.slice.call(faqTrack.querySelectorAll(".faqcard"));
+    var open = 0, settleT = null;
+    // center the open card within the track (horizontal scroll only — no page jump)
+    function centerOpen(card) {
+      var t = faqTrack.getBoundingClientRect(), c = card.getBoundingClientRect();
+      var delta = (c.left - t.left) - (t.width - c.width) / 2;
+      faqTrack.scrollTo({ left: faqTrack.scrollLeft + delta, behavior: "smooth" });
+    }
+    function setOpen(i) {
+      open = Math.max(0, Math.min(cards.length - 1, i));
+      cards.forEach(function (c, idx) { c.classList.toggle("faqcard--open", idx === open); });
+      var card = cards[open];
+      requestAnimationFrame(function () { centerOpen(card); });   // start moving immediately
+      clearTimeout(settleT);
+      settleT = setTimeout(function () { centerOpen(card); }, 600); // re-center once the card has finished expanding
+      var prev = document.getElementById("faqPrev"), next = document.getElementById("faqNext");
+      if (prev) prev.disabled = open === 0;
+      if (next) next.disabled = open === cards.length - 1;
+    }
+    cards.forEach(function (c, idx) { c.addEventListener("click", function () { setOpen(idx); }); });
+    var p = document.getElementById("faqPrev"), n = document.getElementById("faqNext");
+    if (p) p.addEventListener("click", function () { setOpen(open - 1); });
+    if (n) n.addEventListener("click", function () { setOpen(open + 1); });
+    setOpen(0);
+  }
+
+  // ---- nav: sticky state ----
+  var nav = document.getElementById("nav");
+  function navScroll() { if (nav) nav.classList.toggle("is-stuck", (window.scrollY || 0) > 8); }
+  navScroll(); window.addEventListener("scroll", navScroll, { passive: true });
+
+  // ---- nav: mobile toggle ----
+  var toggle = document.getElementById("navToggle"), mm = document.getElementById("mobileMenu");
+  if (toggle && mm) {
+    var setMenuOpen = function (o) { document.body.classList.toggle("menu-open", o); toggle.setAttribute("aria-expanded", String(o)); document.body.style.overflow = o ? "hidden" : ""; };
+    toggle.addEventListener("click", function () { setMenuOpen(!document.body.classList.contains("menu-open")); });
+    mm.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { setMenuOpen(false); }); });
+    window.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenuOpen(false); });
+  }
+
+  // ---- nav: mega-menu dropdowns ----
+  var navMenu = document.getElementById("navMenu"), megawrap = document.getElementById("megawrap"), navScrim = document.getElementById("navScrim");
+  if (navMenu && megawrap) {
+    var fine = window.matchMedia("(pointer:fine)").matches;
+    var items = Array.prototype.slice.call(navMenu.querySelectorAll(".navitem"));
+    var panels = Array.prototype.slice.call(megawrap.querySelectorAll(".mega"));
+    var openName = null, closeTimer = null;
+    function openMenu(name) {
+      if (openName === name) return; clearTimeout(closeTimer);
+      panels.forEach(function (p) { p.classList.toggle("is-open", p.dataset.panel === name); });
+      items.forEach(function (i) { var ln = i.querySelector(".navlink"), on = ln.dataset.menu === name; i.classList.toggle("is-open", on); ln.setAttribute("aria-expanded", String(on)); });
+      document.body.classList.add("nav-open"); openName = name;
+    }
+    function closeMenu() {
+      clearTimeout(closeTimer);
+      panels.forEach(function (p) { p.classList.remove("is-open"); });
+      items.forEach(function (i) { i.classList.remove("is-open"); i.querySelector(".navlink").setAttribute("aria-expanded", "false"); });
+      document.body.classList.remove("nav-open"); openName = null;
+    }
+    items.forEach(function (item) {
+      var link = item.querySelector(".navlink"), name = link.dataset.menu;
+      if (fine) item.addEventListener("mouseenter", function () { openMenu(name); });
+      link.addEventListener("click", function (e) { e.preventDefault(); openName === name ? closeMenu() : openMenu(name); });
+    });
+    if (fine) {
+      navMenu.addEventListener("mouseenter", function () { clearTimeout(closeTimer); });
+      navMenu.addEventListener("mouseleave", function () { closeTimer = setTimeout(closeMenu, 200); });
+      panels.forEach(function (p) { p.addEventListener("mouseenter", function () { clearTimeout(closeTimer); }); p.addEventListener("mouseleave", function () { closeTimer = setTimeout(closeMenu, 200); }); });
+    }
+    document.addEventListener("click", function (e) { if (openName && !navMenu.contains(e.target) && !megawrap.contains(e.target)) closeMenu(); });
+    window.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
+    window.addEventListener("scroll", function () { if (openName) closeMenu(); }, { passive: true });
+    if (navScrim) navScrim.addEventListener("click", closeMenu);
+    megawrap.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeMenu); });
+  }
+</script>
+</body>
+</html>

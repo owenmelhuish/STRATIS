@@ -1,5 +1,5 @@
 /* =========================================================================
-   STRATIS — interaction + motion engine
+   STRATIS - interaction + motion engine
    Loader · kinetic type · scroll reveals · parallax · progress · nav · FAQ
    ========================================================================= */
 (function () {
@@ -8,7 +8,7 @@
   const finePointer = window.matchMedia("(pointer:fine)").matches;
 
   /* ----------------------------------------------------------------- */
-  /*  Kinetic typography — split headlines into masked words           */
+  /*  Kinetic typography - split headlines into masked words           */
   /* ----------------------------------------------------------------- */
   function splitHeading(h) {
     if (h.classList.contains("kin")) return;
