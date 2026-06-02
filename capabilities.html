@@ -342,7 +342,7 @@
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
   document.querySelectorAll(".r:not(.in)").forEach(function (el) { io.observe(el); });
-  document.querySelectorAll("video").forEach(function (v) { v.play && v.play().catch(function(){}); });
+  (function(){var play=function(){document.querySelectorAll("video").forEach(function(v){try{v.muted=true;v.setAttribute("playsinline","");v.setAttribute("webkit-playsinline","");var p=v.play();if(p&&p.catch)p.catch(function(){});}catch(e){}});};play();["touchstart","pointerdown","scroll","click"].forEach(function(ev){window.addEventListener(ev,function h(){play();window.removeEventListener(ev,h);},{once:true,passive:true});});})();
 
   // ---- capability filter ----
   var capFilter = document.getElementById("capFilter"), capGrid = document.getElementById("capGrid");
