@@ -14,7 +14,7 @@
   const NS = "http://www.w3.org/2000/svg";
 
   const C = {
-    blue: "#2E5BFF", deep: "#1B3FCB", steel: "#4E7BC4", cyan: "#45B4DA", violet: "#6E6BFF",
+    blue: "#57FFEB", deep: "#16C6B2", steel: "#4E7BC4", cyan: "#45B4DA", violet: "#6E6BFF",
     ink: "#16181C", ink1: "#2A2E34", ink2: "#535860", ink3: "#82888F", ink4: "#A7ACB2",
     line: "rgba(22,24,28,0.10)", track: "#E3E6EB", white: "#FFFFFF",
   };

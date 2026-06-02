@@ -1,0 +1,68 @@
+/* =========================================================================
+   STRATIS — interior pages (agencies / enterprise)
+   Built on the home.css design language: rounded blocks, turquoise signal.
+   Reuses home.css for nav, hero, intel/molecule panel, video CTA, footer.
+   ========================================================================= */
+
+/* section rhythm — matches .intel / .metrics spacing in home.css */
+.psection { width: 100%; max-width: 1536px; margin-inline: auto; padding: 24px 12px; }
+@media (min-width: 768px) { .psection { padding: 48px 20px; } }
+
+/* centered section head (same look as .intel__head) */
+.phead { max-width: 760px; margin: 0 auto clamp(28px, 4vw, 48px); text-align: center; }
+.peyebrow { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--signal); font-weight: 600; }
+.ptitle { font-family: var(--display); font-weight: 500; font-size: clamp(1.8rem, 3.6vw, 3rem); letter-spacing: -0.025em; color: var(--ink-strong); line-height: 1.06; margin: 1rem 0 0.9rem; text-wrap: balance; }
+.psub { font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.5; color: var(--ink); max-width: 60ch; margin-inline: auto; }
+
+/* ---- statement (big centered line in a soft rounded block) ---- */
+.statement { background: var(--navy-tint); border: 1px solid var(--navy-bd); border-radius: 1.5rem; padding: clamp(32px, 5vw, 72px); text-align: center; max-width: 1180px; margin-inline: auto; }
+@media (min-width: 768px) { .statement { border-radius: 3rem; } }
+.statement__index { font-family: var(--body); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+.statement__title { font-family: var(--display); font-weight: 500; font-size: clamp(1.7rem, 3.4vw, 2.9rem); letter-spacing: -0.025em; color: var(--ink-strong); line-height: 1.08; margin: 1rem 0 1.1rem; text-wrap: balance; }
+.statement__body { font-size: clamp(1rem, 1.3vw, 1.18rem); line-height: 1.55; color: var(--ink); max-width: 66ch; margin-inline: auto; }
+
+/* ---- 3-up grid of rounded cards (values, pillars) ---- */
+.trio { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 768px) { .trio { grid-template-columns: repeat(3, 1fr); } }
+.pcard { position: relative; overflow: hidden; background: #fff; border: 1px solid var(--navy-bd); border-radius: 1.5rem; padding: clamp(26px, 2.4vw, 38px); display: flex; flex-direction: column; transition: box-shadow 0.5s var(--ease), transform 0.6s var(--ease); }
+@media (min-width: 768px) { .pcard { border-radius: 2rem; } }
+.pcard:hover { box-shadow: 0 8px 30px rgb(0 0 0 / 0.04); transform: translateY(-3px); }
+.pcard__icon { width: 34px; height: 34px; color: var(--signal); margin-bottom: 1.1rem; }
+.pcard__num { font-family: var(--display); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.16em; color: var(--signal); margin-bottom: 1rem; }
+.pcard__title { font-family: var(--display); font-weight: 500; font-size: clamp(1.15rem, 1.7vw, 1.42rem); letter-spacing: -0.015em; color: var(--ink-strong); line-height: 1.16; margin-bottom: 0.6rem; }
+.pcard__desc { font-size: 0.96rem; color: var(--ink); line-height: 1.5; }
+
+/* ---- capability rows — rounded white panels, alternating media ---- */
+.caps { display: flex; flex-direction: column; gap: 16px; }
+.cap2 { background: #fff; border: 1px solid var(--navy-bd); border-radius: 1.5rem; overflow: hidden; display: grid; grid-template-columns: 1fr; }
+@media (min-width: 768px) { .cap2 { border-radius: 2rem; grid-template-columns: 1.05fr 0.95fr; } }
+.cap2__body { padding: clamp(28px, 3vw, 52px); display: flex; flex-direction: column; justify-content: center; }
+.cap2__tag { display: inline-flex; align-items: center; gap: 0.5em; align-self: flex-start; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--signal); font-weight: 600; margin-bottom: 1.1rem; }
+.cap2__tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--signal); }
+.cap2__title { font-family: var(--display); font-weight: 500; font-size: clamp(1.4rem, 2.2vw, 2.05rem); letter-spacing: -0.02em; color: var(--ink-strong); line-height: 1.12; margin-bottom: 1rem; max-width: 24ch; }
+.cap2__promise { font-size: 1rem; color: var(--ink); line-height: 1.55; margin-bottom: 1.5rem; max-width: 52ch; }
+.cap2__points { display: flex; flex-direction: column; gap: 0.7rem; }
+.cap2__points li { position: relative; padding-left: 1.7em; font-size: 0.95rem; color: var(--ink-strong); line-height: 1.45; }
+.cap2__points li::before { content: ""; position: absolute; left: 0; top: 0.45em; width: 8px; height: 8px; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 4px rgba(87,255,235,0.16); }
+.cap2__media { position: relative; min-height: 250px; overflow: hidden; background: radial-gradient(120% 100% at 35% 25%, rgba(87,255,235,0.22), #e9edf3 72%); display: grid; place-items: center; }
+@media (min-width: 768px) { .cap2--flip .cap2__body { order: 2; } .cap2--flip .cap2__media { order: 1; } }
+.cap2__media-label { position: absolute; left: 20px; bottom: 16px; font-family: var(--body); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+.cap2__orb { width: clamp(90px, 16vw, 150px); height: clamp(90px, 16vw, 150px); border-radius: 50%; background: radial-gradient(circle at 38% 34%, rgba(87,255,235,0.95), rgba(87,255,235,0.18) 58%, transparent 72%); animation: capPulse 5s var(--ease) infinite; }
+@keyframes capPulse { 0%, 100% { transform: scale(0.9); opacity: 0.78; } 50% { transform: scale(1.07); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .cap2__orb { animation: none; } }
+
+/* ---- dark trust panel (matches the dark CTA/footer language) ---- */
+.trustp { position: relative; overflow: hidden; background: linear-gradient(157deg, #14171D 0%, #0B0D11 82%); border-radius: 1.5rem; padding: clamp(36px, 5vw, 76px); }
+@media (min-width: 768px) { .trustp { border-radius: 3rem; } }
+.trustp::before { content: ""; position: absolute; top: -20%; right: -8%; width: 50%; height: 70%; background: radial-gradient(circle, rgba(87,255,235,0.10), transparent 68%); pointer-events: none; }
+.trustp__inner { position: relative; z-index: 1; }
+.trustp__index { font-family: var(--body); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--signal); font-weight: 600; }
+.trustp__title { font-family: var(--display); font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.6rem); letter-spacing: -0.025em; color: #fff; line-height: 1.1; margin: 1rem 0 0; max-width: 28ch; text-wrap: balance; }
+.trustp__grid { display: grid; grid-template-columns: 1fr; gap: 22px; margin-top: clamp(32px, 4vw, 52px); }
+@media (min-width: 768px) { .trustp__grid { grid-template-columns: repeat(3, 1fr); gap: 34px; } }
+.tpoint2__icon { width: 26px; height: 26px; color: var(--signal); margin-bottom: 0.9rem; }
+.tpoint2 h3 { font-family: var(--display); font-weight: 500; font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem; }
+.tpoint2 p { font-size: 0.92rem; color: #9097A0; line-height: 1.5; }
+.trustp__badges { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: clamp(30px, 4vw, 48px); padding-top: clamp(24px, 3vw, 32px); border-top: 1px solid rgba(255,255,255,0.1); }
+.trustp__badges-label { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: #6B7280; font-weight: 600; }
+.badge-slot2 { font-family: var(--display); font-size: 0.84rem; font-weight: 500; color: #E7E9EC; padding: 0.5em 1em; border: 1px solid rgba(255,255,255,0.14); border-radius: 100px; }

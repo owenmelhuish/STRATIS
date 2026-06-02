@@ -136,7 +136,7 @@ function init(canvas) {
   // network: one node can fan out to several others in different spots,
   // forming a connected sub-tree that spreads across the sphere to "find
   // patterns" in the org data. Capped (NOT the whole graph). New tree/cycle.
-  const BLUE = new THREE.Color(0x2E5BFF);
+  const BLUE = new THREE.Color(0x57FFEB);
   const N = nodes.length;
   const EDGE_DUR = 0.42, D_MAX = 6, MAX_NODES = 24, HOLD = 1.7, FADE = 1.5;
   const GROW = D_MAX * EDGE_DUR, CYCLE = GROW + HOLD + FADE;

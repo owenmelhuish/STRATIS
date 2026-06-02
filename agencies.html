@@ -5,40 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>STRATIS for agencies — The whole picture, reasoned for every client</title>
 <meta name="description" content="STRATIS brings senior-grade reasoning to every account — weighing each client's performance, brand, and market as one — so quality scales without your headcount having to." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%232E5BFF'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%2316181C'/%3E%3C/svg%3E" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<script>document.documentElement.className += " js";</script>
-<link rel="stylesheet" href="css/styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/home.css" />
+<link rel="stylesheet" href="css/pages.css" />
 </head>
 <body>
 
-<div id="loader" aria-hidden="true">
-  <div class="loader__inner">
-    <span class="wordmark"><span class="wordmark__glyph"></span>STRATIS</span>
-    <span class="loader__bar"><i></i></span>
-  </div>
-</div>
-<div id="progress" aria-hidden="true"></div>
-
+<!-- ============ NAV (three floating glass pills) ============ -->
 <header class="nav" id="nav">
   <div class="nav__row">
-    <a href="index.html" class="navpill navpill--logo" aria-label="STRATIS home"><span class="wordmark__glyph"></span>STRATIS</a>
+    <a href="index.html" class="navpill navpill--logo" aria-label="STRATIS home"><span class="logo"></span></a>
     <nav class="navpill navpill--menu" aria-label="Primary" id="navMenu">
       <div class="navitem"><button class="navlink" data-menu="platform" aria-expanded="false">Platform <span class="chev"></span></button></div>
       <div class="navitem"><button class="navlink" data-menu="solutions" aria-expanded="false">Solutions <span class="chev"></span></button></div>
       <div class="navitem"><button class="navlink" data-menu="resources" aria-expanded="false">Resources <span class="chev"></span></button></div>
     </nav>
-    <a href="#demo" class="navpill navpill--cta">Book a demo <span class="btn__dot"></span></a>
+    <a href="mailto:hello@stratis.technology?subject=Book%20a%20demo" class="navpill navpill--cta">Book a demo
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span>
+    </a>
     <button class="nav__toggle navpill" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 
     <div class="megawrap" id="megawrap">
       <div class="mega" data-panel="platform">
         <div class="mega__inner mega__inner--feature">
           <a class="mega__feature" href="index.html#what">
-            <span class="ambient" aria-hidden="true"><span class="ambient__field"><span class="orb orb--1"></span><span class="orb orb--2"></span><span class="orb orb--3"></span></span></span>
-            <span class="mega__feature-label">The intelligence layer</span>
+            <span class="mega__feature-label">The Live Marketing Terminal</span>
             <span class="mega__feature-title">See the whole picture, reasoned as one →</span>
           </a>
           <div class="mega__links">
@@ -46,10 +44,10 @@
             <div class="mega__grid">
               <a href="index.html#what"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>What it does<span class="ar">→</span></a>
               <a href="index.html#capabilities"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="9" r="2"/><circle cx="11" cy="17" r="2"/><path d="M9 8l6 1M9 9l3 6"/></svg>Capabilities<span class="ar">→</span></a>
-              <a href="index.html#why"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 21l-5-2.8 1-5.5-4-3.9 5.5-.8z"/></svg>Why it's different<span class="ar">→</span></a>
-              <a href="index.html#how"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/><path d="M8 12h2M14 12h2"/></svg>How it works<span class="ar">→</span></a>
-              <a href="index.html#trust"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Trust &amp; governance<span class="ar">→</span></a>
-              <a href="index.html#faq"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3 2.4V14"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></svg>FAQ<span class="ar">→</span></a>
+              <a href="index.html#flywheel"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 21l-5-2.8 1-5.5-4-3.9 5.5-.8z"/></svg>Why it's different<span class="ar">→</span></a>
+              <a href="index.html#flywheel"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/><path d="M8 12h2M14 12h2"/></svg>How it works<span class="ar">→</span></a>
+              <a href="index.html#capabilities"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Trust &amp; governance<span class="ar">→</span></a>
+              <a href="index.html#flywheel"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3 2.4V14"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></svg>FAQ<span class="ar">→</span></a>
             </div>
           </div>
         </div>
@@ -73,18 +71,17 @@
       </div>
       <div class="mega" data-panel="resources">
         <div class="mega__inner mega__inner--feature">
-          <a class="mega__feature" href="index.html#faq">
-            <span class="ambient" aria-hidden="true"><span class="ambient__field"><span class="orb orb--4"></span><span class="orb orb--2"></span><span class="orb orb--3"></span></span></span>
+          <a class="mega__feature" href="index.html#flywheel">
             <span class="mega__feature-label">Resources</span>
             <span class="mega__feature-title">Common questions, answered →</span>
           </a>
           <div class="mega__links">
             <span class="mega__heading">Explore</span>
             <div class="mega__grid">
-              <a href="index.html#faq"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3 2.4V14"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></svg>FAQ<span class="ar">→</span></a>
-              <a href="index.html#trust"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Security &amp; trust<span class="ar">→</span></a>
+              <a href="index.html#flywheel"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3 2.4V14"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></svg>FAQ<span class="ar">→</span></a>
+              <a href="index.html#capabilities"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Security &amp; trust<span class="ar">→</span></a>
               <a href="mailto:hello@stratis.technology"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg>Contact<span class="ar">→</span></a>
-              <a href="#"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>About<span class="ar">→</span></a>
+              <a href="index.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>About<span class="ar">→</span></a>
             </div>
           </div>
         </div>
@@ -93,209 +90,293 @@
   </div>
 </header>
 <div class="nav-scrim" id="navScrim" aria-hidden="true"></div>
-
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html#what">Platform</a>
   <a href="agencies.html">For agencies</a>
   <a href="enterprise.html">For enterprise</a>
-  <a href="index.html#faq">Resources</a>
-  <a href="#demo" class="btn btn--signal"><span class="btn__dot"></span>Book a demo</a>
+  <a href="index.html#flywheel">Resources</a>
+  <a href="mailto:hello@stratis.technology?subject=Book%20a%20demo">Book a demo</a>
 </div>
 
 <main>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="shell hero__inner">
-      <span class="eyebrow reveal">STRATIS for agencies</span>
-      <h1 class="display display--xl reveal" data-delay="1">The whole picture, reasoned for every client at once.</h1>
-      <p class="lede reveal" data-delay="2">STRATIS brings senior-grade reasoning to every account — weighing each client's performance, brand, and market as one — so quality scales without your headcount having to.</p>
-      <div class="hero__actions reveal" data-delay="3">
-        <a href="#demo" class="btn btn--signal btn--lg"><span class="btn__dot"></span>Book a demo</a>
+  <!-- ============ HERO ============ -->
+  <div class="hero-wrap">
+    <section class="hero">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" src="/videos/agencies-hero.mp4"></video>
+      <div class="hero__tint"></div>
+      <div class="hero__content">
+        <span class="badge r in"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l1.6 5.2L19 10l-5.4 1.8L12 17l-1.6-5.2L5 10l5.4-1.8z"/></svg>STRATIS for agencies</span>
+        <h1 class="hero__title r in" data-d="1">The whole picture, reasoned for every client at once.</h1>
+        <p class="hero__sub r in" data-d="2">STRATIS brings senior-grade reasoning to every account — weighing each client's performance, brand, and market as one — so quality scales without your headcount having to.</p>
       </div>
-    </div>
-    <div class="hero-stage">
-      <div class="hero-stage__line"></div>
-      <div class="ambient" aria-hidden="true"><div class="ambient__field">
-        <div class="orb orb--1"></div><div class="orb orb--2"></div><div class="orb orb--3"></div><div class="orb orb--4"></div>
-      </div></div>
-      <div class="ribbon" data-viz="ribbon" aria-hidden="true"></div>
-    </div>
-  </section>
-
-  <!-- THE PROBLEM (agency) -->
-  <section class="section divider">
-    <div class="shell statement">
-      <span class="index reveal">01 — The problem</span>
-      <h2 class="display display--l reveal" data-delay="1">Your best thinking can't be everywhere. STRATIS can.</h2>
-      <p class="lede statement__body reveal" data-delay="2">Senior judgment is your scarcest resource and your highest-margin one — locked in a few people, stretched across too many accounts, impossible to apply in full to every client at once. STRATIS extends that reasoning across every account, weighing each client's full picture the way your sharpest people would if they had unlimited time, and freeing your team for the work only people can do.</p>
-    </div>
-  </section>
-
-  <!-- TAILORED VALUE BLOCK -->
-  <section class="section divider">
-    <div class="shell">
-      <div class="values__head reveal">
-        <span class="eyebrow">For the agency model</span>
-        <h2 class="display display--m mt-s">Depth on every account — without diluting it</h2>
+      <div class="card-bl">
+        <span class="card-bl__dots"><span></span><span></span><span></span></span>
+        <span class="card-bl__txt">Senior-grade reasoning, on every account<small>quality that scales without your headcount having to</small></span>
+        <a href="mailto:hello@stratis.technology?subject=Book%20a%20demo%20(Agencies)" class="card-bl__btn">Book a demo</a>
       </div>
-      <div class="values">
-        <div class="value reveal">
-          <svg class="value__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19V9l8-5 8 5v10"/><path d="M9 19v-6h6v6"/></svg>
-          <h3>Depth on every account</h3>
-          <p>The same complete reasoning across all clients, not only the ones with senior attention.</p>
-        </div>
-        <div class="value reveal" data-delay="1">
-          <svg class="value__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="11" r="2.4"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M14 20c0-2 1.4-3.6 3-3.6s3 1.6 3 3.6"/></svg>
-          <h3>Capacity without headcount</h3>
-          <p>Extend your best thinking across more accounts without diluting it.</p>
-        </div>
-        <div class="value reveal" data-delay="2">
-          <svg class="value__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18c4-1 5-9 8-9s4 5 8 4"/><circle cx="4" cy="18" r="1.4" fill="currentColor"/><circle cx="20" cy="13" r="1.4" fill="currentColor"/></svg>
-          <h3>A per-client edge that compounds</h3>
-          <p>STRATIS builds a deepening understanding of each client that stays yours.</p>
-        </div>
-      </div>
+      <a href="index.html#flywheel" class="corner-br">
+        <svg class="corner-cut corner-cut--top" viewBox="0 0 56 56"><path d="M56 56V0C56 30.9279 30.9279 56 0 56H56Z" fill="#f0f0f0"/></svg>
+        <svg class="corner-cut corner-cut--left" viewBox="0 0 56 56"><path d="M56 56V0C56 30.9279 30.9279 56 0 56H56Z" fill="#f0f0f0"/></svg>
+        <span class="corner-br__circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span>
+        <span class="corner-br__txt">Documentation<small>Resources &amp; FAQ</small></span>
+      </a>
+    </section>
+  </div>
+
+  <!-- ============ THE PROBLEM ============ -->
+  <section class="psection">
+    <div class="statement r">
+      <span class="statement__index">01 — The problem</span>
+      <h2 class="statement__title">Your best thinking can't be everywhere. STRATIS can.</h2>
+      <p class="statement__body">Senior judgment is your scarcest resource and your highest-margin one — locked in a few people, stretched across too many accounts, impossible to apply in full to every client at once. STRATIS extends that reasoning across every account, weighing each client's full picture the way your sharpest people would if they had unlimited time, and freeing your team for the work only people can do.</p>
     </div>
   </section>
 
-  <!-- MOLECULAR SYSTEM (3D) -->
-  <section class="section divider" id="system">
-    <div class="shell">
-      <div class="molecule__head reveal">
-        <span class="eyebrow">The intelligence layer</span>
-        <h2 class="display display--l">Every client's whole picture, held as one connected system.</h2>
-        <p class="lede">From brand and organization down to audiences, campaigns, and execution — each account lives in one connected structure. Nothing reasoned in isolation.</p>
+  <!-- ============ VALUES ============ -->
+  <section class="psection">
+    <div class="phead r">
+      <span class="peyebrow">For the agency model</span>
+      <h2 class="ptitle">Depth on every account — without diluting it.</h2>
+    </div>
+    <div class="trio">
+      <div class="pcard r">
+        <svg class="pcard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19V9l8-5 8 5v10"/><path d="M9 19v-6h6v6"/></svg>
+        <h3 class="pcard__title">Depth on every account</h3>
+        <p class="pcard__desc">The same complete reasoning across all clients, not only the ones with senior attention.</p>
       </div>
-      <div class="molecule reveal reveal--media" data-delay="1">
-        <div class="molecule__canvas-wrap"><canvas id="moleculeCanvas"></canvas></div>
-        <ul class="molecule__legend">
-          <li><span style="background:#1A1D21"></span>Brand</li>
-          <li><span style="background:#3A4047"></span>Organization</li>
-          <li><span style="background:#545B63"></span>Products</li>
-          <li><span style="background:#6C737B"></span>Audiences</li>
-          <li><span style="background:#868D95"></span>Campaigns</li>
-          <li><span style="background:#9AA1A9"></span>Execution</li>
-        </ul>
-        <span class="molecule__hint">Drag to explore</span>
+      <div class="pcard r" data-d="1">
+        <svg class="pcard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="11" r="2.4"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M14 20c0-2 1.4-3.6 3-3.6s3 1.6 3 3.6"/></svg>
+        <h3 class="pcard__title">Capacity without headcount</h3>
+        <p class="pcard__desc">Extend your best thinking across more accounts without diluting it.</p>
+      </div>
+      <div class="pcard r" data-d="2">
+        <svg class="pcard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18c4-1 5-9 8-9s4 5 8 4"/><circle cx="4" cy="18" r="1.4" fill="currentColor"/><circle cx="20" cy="13" r="1.4" fill="currentColor"/></svg>
+        <h3 class="pcard__title">A per-client edge that compounds</h3>
+        <p class="pcard__desc">STRATIS builds a deepening understanding of each client that stays yours.</p>
       </div>
     </div>
   </section>
 
-  <!-- REUSED: CAPABILITY WALKTHROUGH -->
-  <section class="section divider">
-    <div class="shell">
-      <div class="moat__head reveal">
-        <span class="eyebrow">What STRATIS does</span>
-        <h2 class="display display--l">One intelligence, reasoning the whole picture for every client.</h2>
-      </div>
+  <!-- ============ SYSTEM (3D molecule) ============ -->
+  <section class="intel" id="system">
+    <div class="intel__head r">
+      <span class="intel__eyebrow">The Live Marketing Terminal</span>
+      <h2 class="intel__title">Every client's whole picture, held as one connected system.</h2>
+      <p class="intel__sub">From brand and organization down to audiences, campaigns, and execution — each account lives in one connected structure. Nothing reasoned in isolation.</p>
+    </div>
+    <div class="intel__panel r" data-d="1">
+      <div class="molecule__canvas-wrap"><canvas id="moleculeCanvas"></canvas></div>
+      <ul class="molecule__legend">
+        <li><span style="background:#1A1D21"></span>Brand</li>
+        <li><span style="background:#3A4047"></span>Organization</li>
+        <li><span style="background:#545B63"></span>Products</li>
+        <li><span style="background:#6C737B"></span>Audiences</li>
+        <li><span style="background:#868D95"></span>Campaigns</li>
+        <li><span style="background:#9AA1A9"></span>Execution</li>
+      </ul>
+      <span class="molecule__hint">Drag to explore</span>
+    </div>
+  </section>
 
-      <article class="cap reveal">
-        <div class="cap__body">
-          <span class="tag">Sees across everything</span>
-          <h3 class="cap__heading display display--m">Every signal that matters, weighed against each brand</h3>
-          <p class="cap__promise">STRATIS continuously takes in each client's performance, brand strategy and constraints, and what's moving in their market — and weighs every input against <em>their</em> context before it shapes a decision. Nothing is read in isolation, and no client gets a generic read.</p>
-          <ul class="cap__points">
+  <!-- ============ CAPABILITIES ============ -->
+  <section class="psection">
+    <div class="phead r">
+      <span class="peyebrow">What STRATIS does</span>
+      <h2 class="ptitle">One intelligence, reasoning the whole picture for every client.</h2>
+    </div>
+    <div class="caps">
+      <article class="cap2 r">
+        <div class="cap2__body">
+          <span class="cap2__tag">Sees across everything</span>
+          <h3 class="cap2__title">Every signal that matters, weighed against each brand</h3>
+          <p class="cap2__promise">STRATIS continuously takes in each client's performance, brand strategy and constraints, and what's moving in their market — and weighs every input against <em>their</em> context before it shapes a decision. Nothing is read in isolation, and no client gets a generic read.</p>
+          <ul class="cap2__points">
             <li>Takes in performance, brand context, and external market signal together</li>
             <li>Weighs every input through each client's specific strategy and constraints</li>
             <li>Separates what's relevant from what only looks relevant</li>
           </ul>
         </div>
-        <div class="cap__media" data-viz="signal"><div class="ambient" aria-hidden="true"><div class="ambient__field"><div class="orb orb--1"></div><div class="orb orb--2"></div><div class="orb orb--3"></div></div></div><span class="cap__media-label">Signal field · weighted</span></div>
+        <div class="cap2__media"><div class="cap2__orb"></div><span class="cap2__media-label">Signal field · weighted</span></div>
       </article>
-
-      <article class="cap cap--flip reveal">
-        <div class="cap__body">
-          <span class="tag">Reasons across it all</span>
-          <h3 class="cap__heading display display--m">Decisions that hold up against the whole picture, not one number</h3>
-          <p class="cap__promise">Most tools answer a narrow question against narrow data. STRATIS reasons across performance, brand, market, history, and where things are heading — in a single decision per client. The recommendation is coherent for the brand, not just correct for a metric.</p>
-          <ul class="cap__points">
+      <article class="cap2 cap2--flip r">
+        <div class="cap2__body">
+          <span class="cap2__tag">Reasons across it all</span>
+          <h3 class="cap2__title">Decisions that hold up against the whole picture, not one number</h3>
+          <p class="cap2__promise">Most tools answer a narrow question against narrow data. STRATIS reasons across performance, brand, market, history, and where things are heading — in a single decision per client. The recommendation is coherent for the brand, not just correct for a metric.</p>
+          <ul class="cap2__points">
             <li>Integrates past patterns, present state, and forward projection as one</li>
             <li>Produces decisions coherent across each account, not locally correct</li>
             <li>Shows the reasoning — every decision arrives with the logic behind it</li>
           </ul>
         </div>
-        <div class="cap__media" data-viz="converge"><div class="ambient" aria-hidden="true"><div class="ambient__field"><div class="orb orb--4"></div><div class="orb orb--2"></div><div class="orb orb--3"></div></div></div><span class="cap__media-label">Reasoned · as one</span></div>
+        <div class="cap2__media"><div class="cap2__orb"></div><span class="cap2__media-label">Reasoned · as one</span></div>
       </article>
-
-      <article class="cap reveal">
-        <div class="cap__body">
-          <span class="tag">Compounds over time</span>
-          <h3 class="cap__heading display display--m">The longer it runs an account, the sharper it gets</h3>
-          <p class="cap__promise">STRATIS builds an understanding of each client that deepens with every decision, season, and outcome it sees — a per-client asset that grows richer across the life of the relationship and stays entirely yours.</p>
-          <ul class="cap__points">
+      <article class="cap2 r">
+        <div class="cap2__body">
+          <span class="cap2__tag">Compounds over time</span>
+          <h3 class="cap2__title">The longer it runs an account, the sharper it gets</h3>
+          <p class="cap2__promise">STRATIS builds an understanding of each client that deepens with every decision, season, and outcome it sees — a per-client asset that grows richer across the life of the relationship and stays entirely yours.</p>
+          <ul class="cap2__points">
             <li>Builds a living memory of each client's decisions and outcomes</li>
             <li>Learns from real results, not intuition alone</li>
             <li>Compounds — the relationship gets more defensible every year</li>
           </ul>
         </div>
-        <div class="cap__media" data-viz="compound"><div class="ambient" aria-hidden="true"><div class="ambient__field"><div class="orb orb--1"></div><div class="orb orb--4"></div><div class="orb orb--3"></div></div></div><span class="cap__media-label">Memory · compounding</span></div>
+        <div class="cap2__media"><div class="cap2__orb"></div><span class="cap2__media-label">Memory · compounding</span></div>
       </article>
     </div>
   </section>
 
-  <!-- REUSED: MOAT -->
-  <section class="section divider">
-    <div class="shell">
-      <div class="moat__head reveal">
-        <span class="eyebrow">Why this is different</span>
-        <h2 class="display display--l">Not a model with a marketing prompt. An intelligence built for the work.</h2>
-        <p class="lede maxw-720">General AI can talk about marketing. STRATIS was built to reason through it — on a foundation no off-the-shelf tool can shortcut.</p>
+  <!-- ============ WHY DIFFERENT (pillars) ============ -->
+  <section class="psection">
+    <div class="phead r">
+      <span class="peyebrow">Why this is different</span>
+      <h2 class="ptitle">Not a model with a marketing prompt. An intelligence built for the work.</h2>
+      <p class="psub">General AI can talk about marketing. STRATIS was built to reason through it — on a foundation no off-the-shelf tool can shortcut.</p>
+    </div>
+    <div class="trio">
+      <div class="pcard r">
+        <span class="pcard__num">01</span>
+        <h3 class="pcard__title">Trained on real decisions, not just content</h3>
+        <p class="pcard__desc">STRATIS learned from the actual chain of operator decisions, the actions they produced, and the outcomes that followed — not the marketing content scattered across the open web. It reasons in the shape of a senior practitioner because that's what it was trained on.</p>
       </div>
-      <div class="pillars reveal" data-delay="1">
-        <div class="pillar"><span class="pillar__n">01</span><h3>Trained on real decisions, not just content</h3><p>STRATIS learned from the actual chain of operator decisions, the actions they produced, and the outcomes that followed — not the marketing content scattered across the open web. It reasons in the shape of a senior practitioner because that's what it was trained on.</p></div>
-        <div class="pillar"><span class="pillar__n">02</span><h3>Memory that's yours, and compounds</h3><p>STRATIS accumulates an understanding of each client that lives only in your environment and grows with every interaction. It never starts from scratch, and your signal never trains another agency's system.</p></div>
-        <div class="pillar"><span class="pillar__n">03</span><h3>A loop that sharpens with every decision</h3><p>Every recommendation, action, and outcome feeds back in — so the system gets measurably sharper the more it runs. Its advantage widens over time rather than wearing off.</p></div>
+      <div class="pcard r" data-d="1">
+        <span class="pcard__num">02</span>
+        <h3 class="pcard__title">Memory that's yours, and compounds</h3>
+        <p class="pcard__desc">STRATIS accumulates an understanding of each client that lives only in your environment and grows with every interaction. It never starts from scratch, and your signal never trains another agency's system.</p>
+      </div>
+      <div class="pcard r" data-d="2">
+        <span class="pcard__num">03</span>
+        <h3 class="pcard__title">A loop that sharpens with every decision</h3>
+        <p class="pcard__desc">Every recommendation, action, and outcome feeds back in — so the system gets measurably sharper the more it runs. Its advantage widens over time rather than wearing off.</p>
       </div>
     </div>
   </section>
 
-  <!-- REUSED: TRUST -->
-  <section class="section--tight">
-    <div class="trust">
-      <div class="ambient ambient--dark" aria-hidden="true"><div class="ambient__field"><div class="orb orb--1"></div><div class="orb orb--2"></div><div class="orb orb--3"></div></div></div>
-      <div class="trust__inner">
-        <span class="index reveal">02 — Trust &amp; governance</span>
-        <h2 class="display display--l reveal" data-delay="1">Built so the institutions that can't tolerate ungoverned AI can use it without compromise.</h2>
-        <div class="trust__points reveal" data-delay="2">
-          <div class="tpoint"><svg class="tpoint__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg><h3>Each client stays isolated</h3><p>Every account operates in its own isolated environment. One client's signal never trains another's system.</p></div>
-          <div class="tpoint"><svg class="tpoint__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h14v16l-7-3-7 3z"/><path d="M9 9h6M9 13h6"/></svg><h3>Every decision is auditable</h3><p>Recommendations are logged with full provenance and the reasoning behind them, so any decision can be reconstructed for a client.</p></div>
-          <div class="tpoint"><svg class="tpoint__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><h3>Governed by design</h3><p>Access controls, segregation of duties, and oversight are built into the architecture, not bolted on.</p></div>
+  <!-- ============ TRUST ============ -->
+  <section class="psection">
+    <div class="trustp r">
+      <div class="trustp__inner">
+        <span class="trustp__index">02 — Trust &amp; governance</span>
+        <h2 class="trustp__title">Built so the institutions that can't tolerate ungoverned AI can use it without compromise.</h2>
+        <div class="trustp__grid">
+          <div class="tpoint2"><svg class="tpoint2__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg><h3>Each client stays isolated</h3><p>Every account operates in its own isolated environment. One client's signal never trains another's system.</p></div>
+          <div class="tpoint2"><svg class="tpoint2__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h14v16l-7-3-7 3z"/><path d="M9 9h6M9 13h6"/></svg><h3>Every decision is auditable</h3><p>Recommendations are logged with full provenance and the reasoning behind them, so any decision can be reconstructed for a client.</p></div>
+          <div class="tpoint2"><svg class="tpoint2__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><h3>Governed by design</h3><p>Access controls, segregation of duties, and oversight are built into the architecture, not bolted on.</p></div>
         </div>
-        <div class="trust__badges reveal" data-delay="3">
-          <span class="trust__badges-label">Certifications</span>
-          <span class="badge-slot">SOC 2</span><span class="badge-slot">GDPR</span><span class="badge-slot">HIPAA</span>
+        <div class="trustp__badges">
+          <span class="trustp__badges-label">Certifications</span>
+          <span class="badge-slot2">SOC 2</span><span class="badge-slot2">GDPR</span><span class="badge-slot2">HIPAA</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CLOSING CTA -->
-  <section class="close-cta" id="demo">
-    <div class="ambient" aria-hidden="true"><div class="ambient__field"><div class="orb orb--1"></div><div class="orb orb--2"></div><div class="orb orb--3"></div><div class="orb orb--4"></div></div></div>
-    <div class="shell close-cta__inner">
-      <span class="chip reveal"><span class="chip__dot"></span>STRATIS for agencies</span>
-      <h2 class="display display--xl reveal mt-m" data-delay="1">Senior-grade reasoning, on every account.</h2>
-      <div class="reveal" data-delay="2"><a href="mailto:hello@stratis.technology?subject=Book%20a%20demo%20(Agencies)" class="btn btn--signal btn--lg"><span class="btn__dot"></span>Book a demo</a></div>
-    </div>
-  </section>
+  <!-- ============ CTA (video) ============ -->
+  <div class="cta-wrap" id="demo">
+    <section class="cta">
+      <video class="cta__video" autoplay muted loop playsinline preload="auto" src="/videos/cta.mp4"></video>
+      <div class="cta__tint"></div>
+      <div class="cta__content">
+        <h2 class="cta__title r">Senior-grade reasoning, on every account.</h2>
+        <div class="cta__btns r" data-d="1">
+          <a href="mailto:hello@stratis.technology?subject=Book%20a%20demo%20(Agencies)" class="btn-white">Book a demo
+            <span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span></a>
+          <a href="index.html#flywheel" class="btn-glass">Read the brief</a>
+        </div>
+      </div>
+    </section>
+  </div>
 
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="foot__inner">
+      <div>
+        <div class="foot__logo" aria-label="STRATIS"><span class="logo"></span></div>
+        <p class="foot__desc">The Live Marketing Terminal — where decisions get made.</p>
+      </div>
+      <div class="foot__col">
+        <h4>Product</h4>
+        <a href="index.html">Overview</a>
+        <a href="agencies.html">For agencies</a>
+        <a href="enterprise.html">For enterprise</a>
+        <a href="mailto:hello@stratis.technology">Book a demo</a>
+      </div>
+      <div class="foot__col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="mailto:hello@stratis.technology">Contact</a>
+      </div>
+      <div class="foot__col">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+    <div class="foot__base">© 2026 STRATIS Technology. All rights reserved.</div>
+  </footer>
 </main>
 
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__top">
-      <div><a href="index.html" class="wordmark"><span class="wordmark__glyph"></span>STRATIS</a><p class="footer__tag">The intelligence layer for marketing — the layer where decisions get made.</p></div>
-      <div class="footer__col"><h4>Product</h4><a href="index.html">Overview</a><a href="agencies.html">For agencies</a><a href="enterprise.html">For enterprise</a><a href="#demo">Book a demo</a></div>
-      <div class="footer__col"><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="mailto:hello@stratis.technology">Contact</a></div>
-      <div class="footer__col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a></div>
-    </div>
-    <div class="footer__bottom"><span>© 2026 STRATIS Technology. All rights reserved.</span><span>Reasoned across everything · as one.</span></div>
-  </div>
-</footer>
+<script>
+  // scroll reveals
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
+  document.querySelectorAll(".r:not(.in)").forEach(function (el) { io.observe(el); });
+  document.querySelectorAll("video").forEach(function (v) { v.play && v.play().catch(function(){}); });
 
-<script src="js/visuals.js"></script>
-<script src="js/main.js"></script>
+  // ---- nav: sticky state ----
+  var nav = document.getElementById("nav");
+  function navScroll() { if (nav) nav.classList.toggle("is-stuck", (window.scrollY || 0) > 8); }
+  navScroll(); window.addEventListener("scroll", navScroll, { passive: true });
+
+  // ---- nav: mobile toggle ----
+  var toggle = document.getElementById("navToggle"), mm = document.getElementById("mobileMenu");
+  if (toggle && mm) {
+    var setOpen = function (open) { document.body.classList.toggle("menu-open", open); toggle.setAttribute("aria-expanded", String(open)); document.body.style.overflow = open ? "hidden" : ""; };
+    toggle.addEventListener("click", function () { setOpen(!document.body.classList.contains("menu-open")); });
+    mm.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { setOpen(false); }); });
+    window.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
+  }
+
+  // ---- nav: mega-menu dropdowns ----
+  var navMenu = document.getElementById("navMenu"), megawrap = document.getElementById("megawrap"), navScrim = document.getElementById("navScrim");
+  if (navMenu && megawrap) {
+    var fine = window.matchMedia("(pointer:fine)").matches;
+    var items = Array.prototype.slice.call(navMenu.querySelectorAll(".navitem"));
+    var panels = Array.prototype.slice.call(megawrap.querySelectorAll(".mega"));
+    var openName = null, closeTimer = null;
+    function openMenu(name) {
+      if (openName === name) return; clearTimeout(closeTimer);
+      panels.forEach(function (p) { p.classList.toggle("is-open", p.dataset.panel === name); });
+      items.forEach(function (i) { var ln = i.querySelector(".navlink"), on = ln.dataset.menu === name; i.classList.toggle("is-open", on); ln.setAttribute("aria-expanded", String(on)); });
+      document.body.classList.add("nav-open"); openName = name;
+    }
+    function closeMenu() {
+      clearTimeout(closeTimer);
+      panels.forEach(function (p) { p.classList.remove("is-open"); });
+      items.forEach(function (i) { i.classList.remove("is-open"); i.querySelector(".navlink").setAttribute("aria-expanded", "false"); });
+      document.body.classList.remove("nav-open"); openName = null;
+    }
+    items.forEach(function (item) {
+      var link = item.querySelector(".navlink"), name = link.dataset.menu;
+      if (fine) item.addEventListener("mouseenter", function () { openMenu(name); });
+      link.addEventListener("click", function (e) { e.preventDefault(); openName === name ? closeMenu() : openMenu(name); });
+    });
+    if (fine) {
+      navMenu.addEventListener("mouseenter", function () { clearTimeout(closeTimer); });
+      navMenu.addEventListener("mouseleave", function () { closeTimer = setTimeout(closeMenu, 200); });
+      panels.forEach(function (p) { p.addEventListener("mouseenter", function () { clearTimeout(closeTimer); }); p.addEventListener("mouseleave", function () { closeTimer = setTimeout(closeMenu, 200); }); });
+    }
+    document.addEventListener("click", function (e) { if (openName && !navMenu.contains(e.target) && !megawrap.contains(e.target)) closeMenu(); });
+    window.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
+    window.addEventListener("scroll", function () { if (openName) closeMenu(); }, { passive: true });
+    if (navScrim) navScrim.addEventListener("click", closeMenu);
+    megawrap.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeMenu); });
+  }
+</script>
 <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
 <script type="module" src="js/molecule.js"></script>
 </body>
