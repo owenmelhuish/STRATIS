@@ -95,7 +95,7 @@
   <a href="capabilities.html">Capabilities</a>
   <a href="agencies.html">For agencies</a>
   <a href="enterprise.html">For enterprise</a>
-  <a href="index.html#flywheel">Resources</a>
+  <a href="faq.html">FAQ</a>
   <a href="mailto:hello@stratis.technology?subject=Book%20a%20demo">Book a demo</a>
 </div>
 
@@ -103,7 +103,7 @@
   <!-- ============ HERO ============ -->
   <div class="hero-wrap">
     <section class="hero">
-      <video class="hero__video" autoplay muted loop playsinline preload="auto" src="/videos/hero.mp4"></video>
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="/videos/hero-poster.jpg" src="/videos/hero.mp4"></video>
       <div class="hero__tint"></div>
       <div class="hero__content">
         <span class="badge r in"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l1.6 5.2L19 10l-5.4 1.8L12 17l-1.6-5.2L5 10l5.4-1.8z"/></svg>Platform capabilities</span>
@@ -291,7 +291,7 @@
   <!-- ============ CTA (video) ============ -->
   <div class="cta-wrap" id="demo">
     <section class="cta">
-      <video class="cta__video" autoplay muted loop playsinline preload="auto" src="/videos/cta.mp4"></video>
+      <video class="cta__video" autoplay muted loop playsinline preload="auto" poster="/videos/cta-poster.jpg" src="/videos/cta.mp4"></video>
       <div class="cta__tint"></div>
       <div class="cta__content">
         <h2 class="cta__title r">Put your whole operation behind one decision layer.</h2>
@@ -342,7 +342,7 @@
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
   document.querySelectorAll(".r:not(.in)").forEach(function (el) { io.observe(el); });
-  (function(){var play=function(){document.querySelectorAll("video").forEach(function(v){try{v.muted=true;v.setAttribute("playsinline","");v.setAttribute("webkit-playsinline","");var p=v.play();if(p&&p.catch)p.catch(function(){});}catch(e){}});};play();["touchstart","pointerdown","scroll","click"].forEach(function(ev){window.addEventListener(ev,function h(){play();window.removeEventListener(ev,h);},{once:true,passive:true});});})();
+  (function(){function go(v){try{v.muted=true;v.setAttribute("playsinline","");v.setAttribute("webkit-playsinline","");if(v.paused){var p=v.play();if(p&&p.catch)p.catch(function(){});}}catch(e){}}function all(){document.querySelectorAll("video").forEach(go);}all();document.querySelectorAll("video").forEach(function(v){["loadeddata","canplay","stalled"].forEach(function(ev){v.addEventListener(ev,function(){go(v);});});});["touchstart","touchend","pointerdown","scroll","click","keydown"].forEach(function(ev){window.addEventListener(ev,all,{passive:true});});document.addEventListener("visibilitychange",function(){if(!document.hidden)all();});})();
 
   // ---- capability filter ----
   var capFilter = document.getElementById("capFilter"), capGrid = document.getElementById("capGrid");

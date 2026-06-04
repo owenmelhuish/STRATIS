@@ -100,7 +100,18 @@ function core(canvas, camZ, fov, opts) {
   controls.dampingFactor = 0.06; controls.rotateSpeed = 0.45;
   controls.autoRotate = (opts.autoRotate !== false) && !reduce; controls.autoRotateSpeed = 0.55;
   if (opts.polar) { controls.minPolarAngle = opts.polar[0]; controls.maxPolarAngle = opts.polar[1]; }
-  function resize() { const w = wrap.clientWidth, h = wrap.clientHeight; if (!w || !h) return; renderer.setSize(w, h, false); if (labelRenderer) labelRenderer.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix(); }
+  function resize() {
+    const w = wrap.clientWidth, h = wrap.clientHeight; if (!w || !h) return;
+    renderer.setSize(w, h, false); if (labelRenderer) labelRenderer.setSize(w, h);
+    const aspect = w / h; camera.aspect = aspect; camera.updateProjectionMatrix();
+    // pull back on narrow/portrait panels so the diagram fits horizontally
+    const half = THREE.MathUtils.degToRad(camera.fov) / 2;
+    const want = camZ * Math.max(1, Math.tan(half) / Math.tan(Math.atan(Math.tan(half) * aspect)));
+    const dir = camera.position.clone().sub(controls.target);
+    const len = dir.length() || 1;
+    camera.position.copy(controls.target).add(dir.multiplyScalar(want / len));
+    controls.update();
+  }
   resize(); new ResizeObserver(resize).observe(wrap);
   const wide = (wrap.clientWidth || 999) >= 460;   // skip dense labels on narrow (mobile) panels
   return { canvas, wrap, scene, root, camera, renderer, labelRenderer, controls, resize, wide };

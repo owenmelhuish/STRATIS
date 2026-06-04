@@ -231,10 +231,25 @@ function init(canvas) {
   controls.enableDamping = true; controls.dampingFactor = 0.05; controls.rotateSpeed = 0.5;
   controls.autoRotate = !reduce; controls.autoRotateSpeed = 0.3;
 
+  // bounding radius of the whole sphere (outer ring + node size + drift + label headroom).
+  // Tuned so the fit distance at aspect 1 matches the original camera z (~86) — desktop
+  // framing is unchanged; only narrow/portrait panels pull the camera further back.
+  const FIT_R = 40;
   function resize() {
     const w = wrap.clientWidth, h = wrap.clientHeight;
     renderer.setSize(w, h, false); labelRenderer.setSize(w, h);
-    camera.aspect = w / h || 1; camera.updateProjectionMatrix();
+    const aspect = w / h || 1;
+    camera.aspect = aspect; camera.updateProjectionMatrix();
+    // pull the camera back on narrow/portrait panels so the full sphere fits
+    // horizontally (otherwise nodes + labels spill off the left/right edges)
+    const vFov = THREE.MathUtils.degToRad(camera.fov);
+    const distV = FIT_R / Math.tan(vFov / 2);
+    const distH = FIT_R / Math.tan(Math.atan(Math.tan(vFov / 2) * aspect));
+    const want = Math.max(distV, distH);
+    const dir = camera.position.clone().sub(controls.target);
+    const len = dir.length() || 1;
+    camera.position.copy(controls.target).add(dir.multiplyScalar(want / len));
+    controls.update();
   }
   resize();
   new ResizeObserver(resize).observe(wrap);
