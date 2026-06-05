@@ -235,15 +235,24 @@ body.menu-open .mobile-menu { transform: none; visibility: visible; }
 @media (min-width: 768px) { .metrics { padding: 48px 20px; } }
 .metrics__box { background: var(--navy-tint); border: 1px solid var(--navy-bd); border-radius: 1.5rem; padding: 32px; }
 @media (min-width: 768px) { .metrics__box { border-radius: 3rem; padding: 64px; } }
+/* 1 col on phones, 2 col mid-range, 4 col only when there's room for the longest
+   single-word value ("Compounding") to sit on one line. */
 .metrics__grid { display: grid; grid-template-columns: 1fr; }
-@media (min-width: 768px) { .metrics__grid { grid-template-columns: repeat(4, 1fr); } }
-.metric { padding: 20px 2px; border-top: 1px solid var(--navy-div); min-width: 0; }
+@media (min-width: 640px) { .metrics__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .metrics__grid { grid-template-columns: repeat(4, 1fr); } }
+.metric { padding: 20px 6px; border-top: 1px solid var(--navy-div); min-width: 0; }
 .metric:first-child { border-top: none; }
-@media (min-width: 768px) {
-  .metric { padding: 24px clamp(16px, 2vw, 32px); border-top: none; border-left: 1px solid var(--navy-div); }
+@media (min-width: 640px) {
+  .metric { padding: 22px clamp(14px, 1.6vw, 28px); border-top: none; }
+  .metric:nth-child(even) { border-left: 1px solid var(--navy-div); }
+  .metric:nth-child(n+3) { border-top: 1px solid var(--navy-div); }
+}
+@media (min-width: 1100px) {
+  .metric { border-top: none; border-left: 1px solid var(--navy-div); }
   .metric:nth-child(1) { border-left: none; }
 }
-.metric__value { font-family: var(--display); font-weight: 500; font-size: clamp(1.9rem, 3.4vw, 3rem); letter-spacing: -0.02em; color: var(--ink-strong); line-height: 1; margin-bottom: 0.5rem; overflow-wrap: break-word; }
+/* single-word values must never wrap; size to fit the 4-col cell */
+.metric__value { font-family: var(--display); font-weight: 500; font-size: clamp(1.55rem, 2.2vw, 2.5rem); letter-spacing: -0.02em; color: var(--ink-strong); line-height: 1.05; margin-bottom: 0.5rem; white-space: nowrap; }
 .metric__label { font-size: 0.9rem; color: var(--ink); line-height: 1.35; }
 
 /* ----------------------------------------------------------------------- */
