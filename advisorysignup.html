@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
-<title>STRATIS Advisory Council — Request a seat</title>
+<title>STRATIS Advisory Council: Request a seat</title>
 <meta name="description" content="An invitation to join the STRATIS Advisory Council, a small group helping to shape the intelligence that will redefine how marketing is run." />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
@@ -218,7 +218,7 @@
     modal.querySelectorAll("[data-seat-close]").forEach(function (el) { el.addEventListener("click", closeModal); });
     window.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal(); });
 
-    // interest toggles (Advisory / Demo) — multi-select, synced to a hidden field
+    // interest toggles (Advisory / Demo): multi-select, synced to a hidden field
     var interestInput = form.querySelector('input[name="interest"]');
     var opts = Array.prototype.slice.call(modal.querySelectorAll(".seat-opt"));
     function syncInterest() { interestInput.value = opts.filter(function (x) { return x.classList.contains("is-on"); }).map(function (x) { return x.dataset.value; }).join(", "); }
@@ -241,7 +241,7 @@
         .then(function (r) { return r.json(); })
         .then(function (j) {
           if (j.success === true || j.success === "true") {
-            msg.className = "seat-msg seat-msg--ok"; msg.textContent = "Thank you — your request has been sent. We'll be in touch.";
+            msg.className = "seat-msg seat-msg--ok"; msg.textContent = "Thank you. Your request has been sent. We'll be in touch.";
             form.reset(); clearInterest(); setTimeout(closeModal, 2400);
           } else {
             msg.className = "seat-msg seat-msg--err"; msg.textContent = (j.message || "Something went wrong.") + " Please email hello@stratis.technology.";

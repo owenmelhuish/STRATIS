@@ -130,7 +130,7 @@
     <div class="statement r">
       <span class="statement__index">01 · The opportunity</span>
       <h2 class="statement__title">Every category gets redefined once. This is marketing's turn.</h2>
-      <p class="statement__body">STRATIS is the intelligence that reasons across the whole picture — media, creative, PR, and competitive intelligence across paid, earned, and owned. The people who lend their voice now help define what the category becomes in the future.</p>
+      <p class="statement__body">STRATIS is the intelligence that reasons across the whole picture: media, creative, PR, and competitive intelligence across paid, earned, and owned. The people who lend their voice now help define what the category becomes in the future.</p>
     </div>
   </section>
 
@@ -179,7 +179,7 @@
         <svg class="card__wm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 17l5-5 4 3 8-9"/><path d="M16 6h4v4"/></svg>
         <span class="card__eyebrow">New business · stewardship</span>
         <h3 class="card__title">5% on net fees over $250k.</h3>
-        <p class="card__desc">Shepherd a relationship through the new business lifecycle — outreach, pitch, proposal, and contract — and earn 5% on any net fees over $250k collected in the first year.</p>
+        <p class="card__desc">Shepherd a relationship through the new business lifecycle (outreach, pitch, proposal, and contract) and earn 5% on any net fees over $250k collected in the first year.</p>
       </article>
       <!-- Card 3, bottom right 1: 1.5% intro -->
       <article class="card group r" data-d="2">
@@ -409,7 +409,7 @@
     modal.querySelectorAll("[data-seat-close]").forEach(function (el) { el.addEventListener("click", closeModal); });
     window.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal(); });
 
-    // interest toggles (Advisory / Demo) — multi-select, synced to a hidden field
+    // interest toggles (Advisory / Demo): multi-select, synced to a hidden field
     var interestInput = form.querySelector('input[name="interest"]');
     var opts = Array.prototype.slice.call(modal.querySelectorAll(".seat-opt"));
     function syncInterest() { interestInput.value = opts.filter(function (x) { return x.classList.contains("is-on"); }).map(function (x) { return x.dataset.value; }).join(", "); }
@@ -432,7 +432,7 @@
         .then(function (r) { return r.json(); })
         .then(function (j) {
           if (j.success === true || j.success === "true") {
-            msg.className = "seat-msg seat-msg--ok"; msg.textContent = "Thank you — your request has been sent. We'll be in touch.";
+            msg.className = "seat-msg seat-msg--ok"; msg.textContent = "Thank you. Your request has been sent. We'll be in touch.";
             form.reset(); clearInterest(); setTimeout(closeModal, 2400);
           } else {
             msg.className = "seat-msg seat-msg--err"; msg.textContent = (j.message || "Something went wrong.") + " Please email hello@stratis.technology.";
