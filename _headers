@@ -13,11 +13,12 @@
 /assets/*
   Cache-Control: public, max-age=2592000
 
-# Styles/scripts share stable filenames, so keep the cache short
+# Styles/scripts share stable filenames, so always revalidate (ETag) to avoid
+# serving a stale CSS/JS bundle after a deploy.
 /css/*
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=0, must-revalidate
 /js/*
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=0, must-revalidate
 
 # HTML should always revalidate so content updates show immediately
 /
