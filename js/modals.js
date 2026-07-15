@@ -9,7 +9,8 @@
    Optional label on a trigger: data-modal-source="Enterprise hero"
 
    Both submit via FormSubmit AJAX to owen@stratis.technology (primary) and
-   CC kyle@stratis.technology. No backend, no dependencies, no CSS file.
+   CC kyle@stratis.technology. The "Book a demo" modal also CCs
+   bbarclay@stratis.technology. No backend, no dependencies, no CSS file.
    Styling mirrors the Advisory "request a seat" modal.
    ========================================================================== */
 (function () {
@@ -72,7 +73,7 @@
         '<p class="sfm-sub">' + esc(cfg.sub) + '</p>' +
         '<form class="sfm-form" novalidate>' +
           '<input type="hidden" name="_subject" value="' + esc(cfg.subject) + '">' +
-          '<input type="hidden" name="_cc" value="' + CC + '">' +
+          '<input type="hidden" name="_cc" value="' + (cfg.cc || CC) + '">' +
           '<input type="hidden" name="_template" value="table">' +
           '<input type="hidden" name="_captcha" value="false">' +
           '<input type="hidden" name="source" value="">' +
@@ -173,6 +174,7 @@
       title: "Book a demo",
       sub: "Tell us where to reach you and we'll set up a walkthrough of STRATIS.",
       subject: "New STRATIS demo request",
+      cc: CC + ",bbarclay@stratis.technology",
       submitLabel: "Request demo",
       msgPlaceholder: "Anything specific you'd like to see? (optional)",
       requireMessage: false
